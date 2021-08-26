@@ -1,0 +1,16 @@
+{
+  "name": "slack-community-app",
+  "version": "1.0.0",
+  "main": "build/app.js",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^3.2.0",
+    "axios": "^0.21.1",
+    "typescript": "^4.2.2",
+    "ws": "^7.4.3"
+  },
+  "scripts": {
+    "start": "tsc && node build/app.js",
+    "build": "tsc"
+  }
+}

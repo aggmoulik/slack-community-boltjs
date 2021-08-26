@@ -1,0 +1,24 @@
+1. Create a Slack app : https://api.slack.com/apps/new
+2. After creating app in a workspace, you can find the app credentials. ( screenshot )
+3. Give bot scope and install to workspace
+3. Copy your Signing Secret from the Basic Information page and then store it in a new environment variable. 
+   - export SLACK_SIGNING_SECRET=<your-signing-secret>
+4. Copy your bot (xoxb) token from the OAuth & Permissions page and store it in another environment variable.
+   - export SLACK_BOT_TOKEN=xoxb-<your-bot-token>
+5. Enable Socket Mode - Screenshot
+
+6. npm install @slack/bolt
+7. You must provide an appToken when using Socket Mode
+
+
+// Connecting using socket mode
+
+1. generate a URL for your WebSocket connection to Slack
+
+
+
+curl -X POST "https://slack.com/api/apps.connections.open" \
+-H "Content-type: application/x-www-form-urlencoded" \
+-H "Authorization: Bearer xapp-1-123"
+
+
